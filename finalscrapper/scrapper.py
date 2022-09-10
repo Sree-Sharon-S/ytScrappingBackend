@@ -9,7 +9,7 @@ import os
 from finalscrapper.urlgen import create_presigned_url, s3_signature
 from finalscrapper.db2 import db, YtScrape,comments
 from finalscrapper.aws_s3 import client
-from finalscrapper import collection
+#from finalscrapper import collection
 from datetime import datetime
 
 
