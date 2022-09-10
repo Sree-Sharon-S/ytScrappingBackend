@@ -17,13 +17,13 @@ def getYoutubeSite(channel_link, no):
         #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
         
         driver.get(channel_link)
-        time.sleep(0.5)
+        #time.sleep(0.5)
         print("entered into videos")
         scrolled_height = 0
         while True:
             print(scrolled_height)
             driver.execute_script(f"window.scrollTo({scrolled_height},{scrolled_height+int(500000)})")
-            time.sleep(0.5)
+            #time.sleep(0.5)
             scrolled_height += 500000
             print("finding elements")
             soup = BeautifulSoup(driver.page_source,'html.parser')
