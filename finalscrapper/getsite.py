@@ -17,7 +17,7 @@ def getYoutubeSite(channel_link, no):
         #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
         
         driver.get(channel_link)
-        time.sleep(3)
+        time.sleep(1)
         print("entered into videos")
         scrolled_height = 0
         while True:

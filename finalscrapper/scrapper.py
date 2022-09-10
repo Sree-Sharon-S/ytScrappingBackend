@@ -30,12 +30,12 @@ def Scrape(urls):
         
         
         driver.get(url)
-        time.sleep(5)
+        time.sleep(2)
 
         prev_h = 500
         
         driver.execute_script(f"window.scrollTo({0},{600})")
-        time.sleep(5)
+        time.sleep(2)
         try:     
             driver.find_element(By.XPATH, '//*[@id="count"]/yt-formatted-string/span[1]')
             
@@ -59,7 +59,7 @@ def Scrape(urls):
                 break
             driver.execute_script("window.scrollTo({},{} )".format(prev_h,height+1000))
             print("Scrolling")
-            time.sleep(1)
+            time.sleep(0.5)
             prev_h = height
             
             
