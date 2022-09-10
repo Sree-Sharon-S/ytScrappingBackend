@@ -23,7 +23,7 @@ def getYoutubeSite(channel_link, no):
         while True:
             print(scrolled_height)
             driver.execute_script(f"window.scrollTo({scrolled_height},{scrolled_height+int(500000)})")
-            time.sleep(5)
+            time.sleep(1)
             scrolled_height += 500000
             print("finding elements")
             soup = BeautifulSoup(driver.page_source,'html.parser')
