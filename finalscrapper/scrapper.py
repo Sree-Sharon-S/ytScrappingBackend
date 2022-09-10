@@ -24,7 +24,7 @@ def Scrape(urls):
         option.add_argument("--disable-dev-shm-usage")
         option.add_argument("--no-sandbox")
         option.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-        driver = webdriver.Chrome(service=Service(os.environ.get(" CHROMEDRIVER PATH")), options = option)
+        driver = webdriver.Chrome(service=Service(os.environ.get("CHROMEDRIVER_PATH")), options = option)
   
 
         
