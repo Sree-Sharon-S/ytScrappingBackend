@@ -27,11 +27,8 @@ def table1():
         db.session.commit()
 
         urls = getYoutubeSite(channel, no_of_videos)
-        try: 
-            Scrape(urls)
-        except:
-            return render_template('index.html')
-
+        
+        Scrape(urls)
         
         data = [[u.id, u.video_url, u.thumbnail_urls,u.title,u.likes,u.no_of_comments,u.views,u.download_link] for u in YtScrape.query.all()]                                     #--4
         csvWriter(data)
