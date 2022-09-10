@@ -30,7 +30,7 @@ def Scrape(urls):
         
         
         driver.get(url)
-        time.sleep(2)
+        time.sleep(0.5)
 
         prev_h = 500
         
