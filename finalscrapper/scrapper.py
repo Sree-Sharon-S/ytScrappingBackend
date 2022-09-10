@@ -112,7 +112,7 @@ def Scrape(urls):
             db.session.add(commentsobj)
             db.session.commit()
         
-        created_time = datetime.datetime.now()
+        created_time = datetime.now
 '''
         mongodata = {
             'created':created_time,
