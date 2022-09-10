@@ -3,6 +3,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service
 from bs4 import BeautifulSoup
 import time
+import os
 
 def getYoutubeSite(channel_link, no):
         channel_link = channel_link + "/videos"
@@ -11,8 +12,10 @@ def getYoutubeSite(channel_link, no):
         option.add_argument("--headless")
         option.add_argument("--disable-dev-shm-usage")
         option.add_argument("--no-sandbox")
+        option.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+        driver = webdriver.Chrome(service=Service(os.environ.path.get(" CHROMEDRIVER PATH")), option = option)
+        #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
         
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
         driver.get(channel_link)
         time.sleep(3)
         print("entered into videos")

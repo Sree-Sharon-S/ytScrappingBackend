@@ -15,9 +15,20 @@ from datetime import datetime
 
 def Scrape(urls):
     for url in urls: 
+        #option = webdriver.ChromeOptions()
+        #option.add_argument("--headless")
+        #driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
+        
         option = webdriver.ChromeOptions()
         option.add_argument("--headless")
-        driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=option)
+        option.add_argument("--disable-dev-shm-usage")
+        option.add_argument("--no-sandbox")
+        option.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
+        driver = webdriver.Chrome(service=Service(os.environ.path.get(" CHROMEDRIVER PATH")), option = option)
+  
+
+        
+        
         driver.get(url)
         time.sleep(5)
 
@@ -102,7 +113,7 @@ def Scrape(urls):
             db.session.commit()
         
         created_time = datetime.datetime.now()
-
+'''
         mongodata = {
             'created':created_time,
             'title': str(title),
@@ -116,7 +127,7 @@ def Scrape(urls):
 
         collection.insert_one(mongodata)
 
-        
+    '''    
 
 
 

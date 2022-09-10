@@ -12,13 +12,13 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-
+'''
 clientmongo = pymongo.MongoClient("mongodb+srv://user0:1a2b3c4d@cluster0.dvd6clz.mongodb.net/?retryWrites=true&w=majority", tlsCAFile=ca)
 dbmo = clientmongo.test
 
 database = clientmongo['projects']
 collection = database['YTScrapping']
-
+'''
 
 from finalscrapper import routes
 
